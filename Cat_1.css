@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: Inter, sans-serif;
+}
+
+main{ /* Страница */
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('fon.jpg');
+}
+
+.main-unit{ /* Основное окно */
+    box-sizing: border-box;
+    width: 50%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #252524;
+}
+
+.category-name{  /* Отступы и расположение названия категории */
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 2%;
+    padding: 0.5%;
+    border-radius: 10px;
+    background-color: #a79776;
+    display: flex;
+    justify-content: space-around;
+    align-items: justify;
+}
+
+.question-unit{  /* Место для картинки */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.question-unit img{ /* Картинка в окне с вопросом */
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.answer-unit{  /* Разметка окон с ответами */
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 2%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.answer-unit span{ /* Размеры и разметка каждого окна с ответом по отдельности */
+    box-sizing: border-box;
+    width: 45%;
+    height: 3.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #a79776;
+}
+
+span label{ /* Текст в контейнерах с ответами */
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: #000000;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+span label:hover{ /* Подстветка текста при наведение курсором на поле с ответом */
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: #422c09;
+}
+
+input[type="radio"] { 
+    position: relative;
+    display: none;
+}
+
+.block-results{ /* Страница результатов */
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #584831de;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: fadeIn 0.7 ease-in-out;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.content-block-results /* Окно результатов */
+{
+    box-sizing: border-box;
+    height: 30rem;
+    width: 40rem;
+    background-color: #252524;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.content-block-results h1{  /* Надпись о завершении викторины */
+    box-sizing: border-box;
+    margin-top: 6%;
+    font-size: 2.5rem;
+    height: 3rem;
+    color: #a79776;
+    text-align: center;
+}
+
+.more-detailes{ /* Окно с оценкой */
+    box-sizing: border-box;
+    width: 28rem;
+    height: 10rem;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.more-detailes p{ /* Текст оценки */
+    color: #a79776;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.button-Glavnaya{ /* Кнопка возвращения на главную в окне результатов. Разметка */
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8%;
+    margin-top: 3%;
+}
+
+.button-Glavnaya button{ /* Кнопка перехода */
+    width: 13rem;
+    height: 2.2rem;
+    background: none;
+    outline: none;
+    background-color: #a79776;
+    color: #252524;
+    font-family:'Inter';
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button-Glavnaya button:hover{ /* Наведение на кнопку в табло результатов */
+    background-color: #422c09;
+}
+
+@media(min-width : 300px) and (max-width : 350px){
+    .main-unit{
+        width: 90%;
+        height: 80vh;
+    }
+    .category-name h1{
+        font-size: 0.8rem;
+    }
+
+    .question-unit{
+        height: 6rem;
+    }
+    .question-unit img{
+        font-size: 0.9rem;
+    }
+
+    .answer-unit span{
+        width: 90%;
+        height: 2.5rem;
+    }
+    .answer-unit span label{
+        font-size: 0.8rem;
+    }
+    .content-block-results{
+        width: 90%;
+        height: 25rem;
+    }
+
+    .content-block-results h1{
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width : 350px) and (max-width : 700px){
+    .main-unit{
+        width: 90%;
+        height: 80vh;
+    }
+    .category-name h1{
+        font-size: 1rem;
+    }
+
+    .question-unit{
+        height: 8rem;
+    }
+
+    .question-unit img{
+        font-size: 0.9rem;
+    }
+
+    .answer-unit span{
+        width: 90%;
+    }
+    .content-block-results{
+        width: 90%;
+        height: 25rem;
+    }
+    .content-block-results h1{
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Cat_1.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Flags of the 3st category</title>
+</head>
+
+<body onload="NextQuestion(0)">
+<main>
+  <!-- creating a modal for when quiz ends -->
+    <div class="block-results" id="score-modal">
+
+        <div class="content-block-results">
+
+            <h1 style="font-family:'Inter';">Викторина завершена!</h1>
+
+            <div class="more-detailes">
+                <p style="margin-bottom:4%;font-family:'Inter';"><span id="remarks"></span></p>
+                <p style="margin-bottom:4%;font-family:'Inter';">Оценка за тест : <span id="number-of-points"></span> / 10</p>
+            </div>
+
+            <div class="button-Glavnaya">
+                <button class="search-form-submit" id="submit1">Вернуться на главную</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="category-name">
+        <h1>Сложный уровень</h1>
+    </div>
+    
+    <div class="main-unit">
+
+        <div class="question-unit">
+            <img id="display-question"style="max-width: 50%; max-height 50%; "></img>
+        </div>
+
+        <div class="answer-unit">
+
+            <span>
+                <input type="radio" id="option-one" name="option" class="radio" value="optionA" onclick="handleNextQuestion()"/>
+                <label for="option-one" class="option" id="option-one-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-two" name="option" class="radio" value="optionB" onclick="handleNextQuestion()"/>
+                <label for="option-two" class="option" id="option-two-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-three" name="option" class="radio" value="optionC" onclick="handleNextQuestion()"/>
+                <label for="option-three" class="option" id="option-three-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-four" name="option" class="radio" value="optionD" onclick="handleNextQuestion()"/>
+                <label for="option-four" class="option" id="option-four-label"></label>
+            </span>
+
+
+        </div>
+
+    </div>
+</main>
+<script src="Cat_3.js"></script>
+</body>
+</html>
